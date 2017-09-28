@@ -44,7 +44,7 @@ module.exports = {
         let validation = await req.Validate.check({
             'name': 'required|min:3|max:30',
             'email': 'required|email',
-            'password': 'required|min:8|max:100|password'
+            'password': 'required|min:8|max:100|confirmed'
         });
 
         if (validation.passed) {
